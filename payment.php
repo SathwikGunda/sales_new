@@ -17,61 +17,60 @@
                     <div class="card mb-5 wow fadeIn">
                         <div class="card-header unique-color text-white text-center font-weight-bold">Payment method</div>
                         <div class="card-body">
-                            <form action="" method="">
+                            <form action="" method="" id="paymentProcess">
 
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input p-type" id="p-cash" name="payment-type" value="cash" checked>
-                                    <label class="custom-control-label" for="p-cash">Cash</label>
+                                    <input type="radio" class="custom-control-input p-type" id="p_cash" name="payment_type" value="cash" checked>
+                                    <label class="custom-control-label" for="p_cash">Cash</label>
                                 </div>
 
                                 <div class="form form-cash pt-3">
 
                                     <div class="form-group">
-                                        <select class="form-control">
+                                        <select class="form-control" id="pc_type" name="pc_type">
                                             <option value="" disabled selected>Choose Option</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
+                                            <option value="1">Collected</option>
+                                            <option value="2">Not Collected</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="c-amount">Amount</label>
-                                        <input type="number" id="c-amount" class="form-control">
+                                        <label for="pc_amount">Amount</label>
+                                        <input type="number" id="pc_amount" name="pc_amount" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="c-reason">Reason</label>
-                                        <textarea id="c-reason" class="form-control"></textarea>
+                                        <label for="pc_reason">Reason</label>
+                                        <textarea id="pc_reason" name="pc_reason" class="form-control"></textarea>
                                     </div>
 
                                 </div>
 
                                 <div class="custom-control custom-radio mt-2">
-                                    <input type="radio" class="custom-control-input p-type" id="p-online" name="payment-type" value="online">
-                                    <label class="custom-control-label" for="p-online">Credit / Debit / ATM Card</label>
+                                    <input type="radio" class="custom-control-input p-type" id="p_online" name="payment_type" value="online">
+                                    <label class="custom-control-label" for="p_online">Credit / Debit / ATM Card</label>
                                 </div>
 
                                 <div class="form form-online pt-3">
 
                                     <div class="form-group">
-                                        <label for="o-card-number">Card Number</label>
-                                        <input type="text" id="o-card-number" class="form-control">
+                                        <label for="po_cnumber">Card Number</label>
+                                        <input type="text" id="po_cnumber" name="po_cnumber" class="form-control">
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="o-cvv">CVV</label>
-                                                <input type="text" id="o-cvv" class="form-control">
+                                                <label for="po_cvv">CVV</label>
+                                                <input type="text" id="po_cvv" name="po_cvv" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="o-exp-mm">Expiry Month</label>
-                                                        <select id="o-exp-mm" class="form-control">
+                                                        <label for="po_emonth">Expiry Month</label>
+                                                        <select id="po_emonth" name="po_emonth" class="form-control">
                                                             <option value="" disabled selected>MM</option>
                                                             <option value="1">01</option>
                                                             <option value="2">02</option>
@@ -81,8 +80,8 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="o-exp-yy">Expiry Year</label>
-                                                        <select id="o-exp-yy" class="form-control">
+                                                        <label for="po_eyear">Expiry Year</label>
+                                                        <select id="po_eyear" name="po_eyear" class="form-control">
                                                             <option value="" disabled selected>YY</option>
                                                             <option value="1">22</option>
                                                             <option value="2">23</option>
@@ -97,14 +96,14 @@
                                 </div>
 
                                 <div class="custom-control custom-radio mt-2">
-                                    <input type="radio" class="custom-control-input p-type" id="p-net-banking" name="payment-type" value="net-banking">
-                                    <label class="custom-control-label" for="p-net-banking">Net-Banking</label>
+                                    <input type="radio" class="custom-control-input p-type" id="p_net" name="payment_type" value="net-banking">
+                                    <label class="custom-control-label" for="p_net">Net-Banking</label>
                                 </div>
 
                                 <div class="form form-net-banking pt-3">
                                     
                                     <div class="form-group">
-                                        <select id="n-bank" class="form-control">
+                                        <select id="pn_sbank" name="pn_sbank" class="form-control">
                                             <option value="" disabled selected>Select Bank</option>
                                             <option value="1">Option 1</option>
                                             <option value="2">Option 2</option>
@@ -115,14 +114,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="n-username">Username</label>
-                                                <input type="text" id="n-username" class="form-control">
+                                                <label for="pn_username">Username</label>
+                                                <input type="text" id="pn_username" name="pn_username" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="n-password">Password</label>
-                                                <input type="text" id="n-password" class="form-control">
+                                                <label for="pn_password">Password</label>
+                                                <input type="text" id="pn_password" name="pn_password" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -130,7 +129,7 @@
                                 </div>
                                 
                                 <div class="text-center mt-4">
-                                    <a id="" class="btn unique-color text-white btn-md mb-4 waves-effect waves-light" href="#" role="button">Confirm</a>
+                                    <button type="submit" class="btn unique-color text-white btn-md mb-4 waves-effect waves-light">Confirm</button>
                                 </div>
 
                             </form>
@@ -163,4 +162,92 @@
     $("input.p-type").click(function() {
         selectForm()
     });
+</script>
+
+<script>
+
+    $(document).ready(function() {
+        $('#paymentProcess').bootstrapValidator({
+
+            fields: {
+
+                pc_type: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Type is required'
+                        }
+                    }
+                },
+                pc_amount: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Amount is required'
+                        },
+                        regexp: {
+                            regexp: /^[0-9. ]*$/,
+                            message: 'Amount can only consist of digits'
+                        }
+                    }
+                },
+                pc_reason: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Reason is required'
+                        }
+                    }
+                },
+                po_cnumber: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Card Number is required'
+                        }
+                    }
+                },
+                po_cvv: {
+                    validators: {
+                        notEmpty: {
+                            message: 'CVV is required'
+                        }
+                    }
+                },
+                po_emonth: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Expiry Month is required'
+                        }
+                    }
+                },
+                po_eyear: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Expiry Year is required'
+                        }
+                    }
+                },
+                pn_sbank: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Bank Name is required'
+                        }
+                    }
+                },
+                pn_username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Username is required'
+                        }
+                    }
+                },
+                pn_password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Password is required'
+                        }
+                    }
+                }
+            }
+        })
+
+    });
+
 </script>

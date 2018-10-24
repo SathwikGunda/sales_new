@@ -18,30 +18,30 @@
                         <div class="card-header text-center text-white font-weight-bold unique-color">Form</div>
                         <div class="card-body">
 
-                            <form action="" method="">
+                            <form action="" method="" name="paymentForm" id="paymentForm">
                                 
-                                <div class="md-form">
-                                    <input type="text" id="f-name" class="form-control">
-                                    <label for="f-name">Name</label>
+                                <div class="form-group">
+                                    <label for="f_name">Name</label>
+                                    <input type="text" id="f_name" name="f_name" class="form-control">
                                 </div>
                                 
-                                <div class="md-form">
-                                    <input type="number" id="f-number" class="form-control">
-                                    <label for="f-number">Mobile Number</label>
+                                <div class="form-group">
+                                    <label for="f_number">Mobile Number</label>
+                                    <input type="number" id="f_number" name="f_number" class="form-control">
                                 </div>
                                 
-                                <div class="md-form">
-                                    <input type="email" id="f-email" class="form-control">
-                                    <label for="f-email">Email Id</label>
+                                <div class="form-group">
+                                    <label for="f_email">Email Id</label>
+                                    <input type="email" id="f_email" name="f_name" class="form-control">
                                 </div>
                                 
-                                <div class="md-form">
-                                    <input type="text" id="f-bname" class="form-control">
-                                    <label for="f-bname">Bussiness Name</label>
+                                <div class="form-group">
+                                    <label for="f_bname">Bussiness Name</label>
+                                    <input type="text" id="f_bname" name="f_bname" class="form-control">
                                 </div>
 
                                 <div class="form-group">
-                                    <select class="form-control">
+                                    <select class="form-control" name="f_bnature" id="f_bnature">
                                         <option value="" disabled selected>Select Nature of Business</option>
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
@@ -50,7 +50,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <select class="form-control">
+                                    <select class="form-control" name="f_dbusiness" id="f_dbusiness">
                                         <option value="" disabled selected>Select Desired Business</option>
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="text-center mt-4">
-                                    <a id="" class="btn unique-color text-white btn-md mb-4 waves-effect waves-light" href="payment.php" role="button">Pay Bill</a>
+                                    <button type="submit" class="btn unique-color text-white btn-md mb-4 waves-effect waves-light" href="#">Pay Bill</button>
                                 </div>
 
                             </form>
@@ -84,3 +84,63 @@
 
 <?php include('footer.php'); ?>
 
+
+<script>
+
+    $(document).ready(function() {
+        $('#paymentForm').bootstrapValidator({
+
+            fields: {
+
+                f_name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Name is required'
+                        }
+                    }
+                },
+                f_number: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Number is required'
+                        },
+                        regexp: {
+                            regexp: /^[0-9. ]*$/,
+                            message: 'Number can only consist of digits'
+                        }
+                    }
+                },
+                f_email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Email is required'
+                        }
+                    }
+                },
+                f_bname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Business Name is required'
+                        }
+                    }
+                },
+                f_bnature: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Nature of Business is required'
+                        }
+                    }
+                },
+                f_dbusiness: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Desired Business is required'
+                        }
+                    }
+                }
+            }
+        })
+
+    });
+
+</script>
