@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <!--Main layout-->
-<main class="">
+<main class="pt-2">
     <div class="container">
 
         <!--Section: Post-->
@@ -28,18 +28,17 @@
 
                                     <div class="form-group">
                                         <select class="form-control" id="pc_type" name="pc_type">
-                                            <option value="" disabled selected>Choose Option</option>
                                             <option value="1">Collected</option>
                                             <option value="2">Not Collected</option>
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group option1">
                                         <label for="pc_amount">Amount</label>
                                         <input type="number" id="pc_amount" name="pc_amount" class="form-control">
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group option2">
                                         <label for="pc_reason">Reason</label>
                                         <textarea id="pc_reason" name="pc_reason" class="form-control"></textarea>
                                     </div>
@@ -161,6 +160,22 @@
     selectForm();
     $("input.p-type").click(function() {
         selectForm()
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#pc_type').change(function() {
+            if ($('#pc_type').val() == '2') {
+                $('.option1').css('display', 'none');
+                $('.option2').css('display', 'block');
+            } else if ($('#pc_type').val() == '1') {
+                $('.option1').css('display', 'block');
+                $('.option2').css('display', 'none');
+            } else{
+                $('.option2').css('display', 'none');
+            }
+        });
     });
 </script>
 
