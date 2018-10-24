@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Prachatech</title>
+    <link rel="shortcut icon" href="img/fav.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -16,10 +17,10 @@
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
-<body class="grey lighten-3">
+<body class="grey lighten-3" style="background-image: url('img/underwater.jpg')">
 
     <!--Main layout-->
-    <main class="">
+    <main class="pt-5">
         <div class="container">
 
             <!--Section: Post-->
@@ -30,7 +31,9 @@
 
                     <!--Grid column-->
                     <div class="col-md-5 mx-auto">
-                        <img src="" alt="logo" height="" width="" class="">
+                        <div class="text-center">
+                            <img src="img/logo.png" alt="logo" height="" width="" class="">
+                        </div>
                         <div class="card mt-3">
                             <div class="card-body">
                                 <div class="row">
@@ -69,7 +72,7 @@
                                                 <a id="" class="btn default-color text-white btn-md btn-block mb-4 waves-effect waves-light" href="index.html" role="button">Sign Up</a>
                                             </div>
                                             <div class="md-form">
-                                                <p class="font-small d-flex justify-content-center">Are you a already a member? <a href="login.html" class="blue-text ml-1">Login</a></p>
+                                                <p class="font-small d-flex justify-content-center">Are you a already a member? <a href="login.php" class="blue-text ml-1">Login</a></p>
                                             </div>
                                         </form>
                                     </div>

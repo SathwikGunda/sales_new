@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Prachatech</title>
+    <link rel="shortcut icon" href="img/fav.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -54,6 +55,9 @@
                                             </div>
                                             <div class="text-center mb-3">
                                                 <a id="" class="btn btn-md btn-block default-color text-white waves-effect waves-light" href="index.php" role="button">Login</a>
+                                            </div>
+                                            <div class="md-form">
+                                                <p class="font-small d-flex justify-content-center">Not a member? <a href="register.php" class="blue-text ml-1">Register</a></p>
                                             </div>
                                         </form>
                                     </div>
